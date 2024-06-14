@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Floor : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
-    public GameObject floorObject;
+    public GameObject enemyObject;
 
     //float timeDiff;
 
@@ -19,10 +19,10 @@ public class Floor : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if  (timer > 10)
+        if  (timer > 30)
         {
-            GameObject newfloor = Instantiate(floorObject);
-            newfloor.transform.position = new Vector3(5, Random.Range(-1.7f, 5.7f), 0);
+            GameObject newEnemy = Instantiate(enemyObject);
+            newEnemy.transform.position = new Vector3(5, Random.Range(-1.7f, 5.7f), 0);
             timer = 0;
         }
 
